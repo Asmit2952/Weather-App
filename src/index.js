@@ -5,7 +5,13 @@ let weather = {
             "https://api.openweathermap.org/data/2.5/weather?q="+ city +"&units=metric&appid=" + this.apiKey
         ).then((response) => {
             if (!response.ok) {
-              alert("No weather found.");
+              //alert("No weather found.");
+              document.querySelector(".city").innerText = "No weather found :(";
+              document.querySelector(".icon").src =  "--";
+              document.querySelector(".description").innerText = "--";
+              document.querySelector(".temp").innerText = "--°C";
+              document.querySelector(".humidity").innerText = "Humidity: --%";
+              document.querySelector(".wind").innerText = "Wind Speed: --km/h";
               throw new Error("No weather found.");
             }
             return response.json();
