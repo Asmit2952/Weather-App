@@ -64,3 +64,8 @@ h1.temp {
     display: flex;
     align-items: center;
   }
+
+.description {
+    text-transform: capitalize;
+    margin-left: 8px;
+}
