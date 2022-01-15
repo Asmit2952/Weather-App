@@ -59,6 +59,7 @@ let geocode = {
           if (request.status === 200){ 
            
             var data = JSON.parse(request.responseText);
+            //console.log(data.results[0]); //to get full address
             weather.fetchWeather(data.results[0].components.county);
       
           } else if (request.status <= 500){ 
